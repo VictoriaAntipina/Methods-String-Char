@@ -111,6 +111,11 @@ public class HW10 {
         System.out.println(RemoveAllZeros("   3 5 0 4 2 0 9 7 0 6 0 4 0       0 0 0 "));
         System.out.println(RemoveAllZeros( "0000000111"));
 
+
+        Utils.Myprint(4);
+
+
+
     }
 }
 
