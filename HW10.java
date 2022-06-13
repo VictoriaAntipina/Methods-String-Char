@@ -2,6 +2,8 @@ package homework;
 
 import hw8.Utils;
 
+import java.util.Locale;
+
 public class HW10 {
 
     /** Подсказки
@@ -9,6 +11,13 @@ public class HW10 {
     charAt - сравнить, что данная буква == конкретной букве
     isEmpty - проверить, что сторока пришла пустая (непустая)
     replace - заменить букву на другую
+     contains - проверить есть ли определенные символы в даноой переменной
+     concat - объединять значения 2-х переменных
+     toApperCase - делает все буквы большими
+     toLowerCase - делает все буквы маленькими
+     charAt - изъять какой-то 1 символ из строки
+     substring - получаем все символы после указанного символа
+
 
      */
 
@@ -92,6 +101,32 @@ public class HW10 {
     }
 
 
+    //Task5
+
+//    Напишите метод, который принимает на вход строку и считает, сколько букв а или А содержится в строке.
+//    Test Data:
+//            “Abracadabra” → 5
+//            “Homenum Revelio” → 0
+
+    public static int count(String str){
+        int count = 0;
+        if (str != null && str.isEmpty() == false){
+            str = str.toLowerCase(Locale.ROOT);
+
+            for (int i = 0; i < str.length(); i++){
+                if (str.charAt(i) == 'a'){
+                    count++;
+                }
+            }
+
+            return count;
+        }
+
+        return 0;
+    }
+
+
+
     public static void main(String[] args) {
 
         Utils.Myprint(1);
@@ -112,7 +147,12 @@ public class HW10 {
         System.out.println(RemoveAllZeros( "0000000111"));
 
 
-        Utils.Myprint(4);
+        Utils.Myprint(4);  // пропустила, идентичная 3
+
+        Utils.Myprint(5);
+
+        System.out.println(count("Abracadabra"));
+        System.out.println(count("Homenum Revelio"));
 
 
 
